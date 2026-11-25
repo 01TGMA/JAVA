@@ -12,15 +12,15 @@ public class LightBill {
 
         double customerBill = 0.0;
 
-        if (units >= 0 && units >= 100) {
+        if (units >= 0 && units <= 100) {
             customerBill = units * 0.15;
-        } else if (units >= 101 && units >= 300) {
+        } else if (units >= 101 && units <= 300) {
             customerBill = units * 0.20;
         }else if (units > 300) {
             customerBill = units * 0.30;
         } else{
                 System.out.println("Error");
-        };
+        }
 
         if (customerBill >= 100.00){
             customerBill = customerBill * 1.05;
